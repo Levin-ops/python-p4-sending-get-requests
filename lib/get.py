@@ -4,7 +4,7 @@ import json
 url = "https://learn-co-curriculum.github.io/json-site-example/endpoints/locations.json"
 
 response = requests.get(url)
-
-json_content = json.loads(response.text)
-
+# print (response.text)
+json_content = json.loads(response.content)
+# print(json_content)
 print(json.dumps(json_content, indent=4))
